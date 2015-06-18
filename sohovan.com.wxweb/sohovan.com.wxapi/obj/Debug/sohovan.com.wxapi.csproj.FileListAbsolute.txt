@@ -8,3 +8,7 @@ E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxapi\bin\Debug\sohovan.com.wxap
 E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxapi\obj\Debug\sohovan.com.wxapi.csprojResolveAssemblyReference.cache
 E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxapi\obj\Debug\sohovan.com.wxapi.dll
 E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxapi\obj\Debug\sohovan.com.wxapi.pdb
+E:\svn\trunk\wechat\sohovan.com.wxapi\bin\Debug\sohovan.com.wxapi.dll
+E:\svn\trunk\wechat\sohovan.com.wxapi\bin\Debug\sohovan.com.wxapi.pdb
+E:\svn\trunk\wechat\sohovan.com.wxapi\obj\Debug\sohovan.com.wxapi.dll
+E:\svn\trunk\wechat\sohovan.com.wxapi\obj\Debug\sohovan.com.wxapi.pdb
