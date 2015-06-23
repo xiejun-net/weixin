@@ -47,6 +47,7 @@
     <Compile Include="CommonMethod.cs" />
     <Compile Include="JsApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SendMessage\TemplateMessage.cs" />
     <Compile Include="UserApi\Oauth2.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
