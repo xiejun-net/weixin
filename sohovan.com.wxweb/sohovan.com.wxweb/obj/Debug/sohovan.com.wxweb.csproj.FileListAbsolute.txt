@@ -24,5 +24,3 @@ E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxweb\bin\zh-Hans\System.Web.Web
 E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxweb\obj\Debug\sohovan.com.wxweb.csprojResolveAssemblyReference.cache
 E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxweb\obj\Debug\sohovan.com.wxweb.dll
 E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxweb\obj\Debug\sohovan.com.wxweb.pdb
-E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxweb\bin\sohovan.com.wxapi.dll
-E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxweb\bin\sohovan.com.wxapi.pdb

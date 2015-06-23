@@ -19,7 +19,7 @@ namespace sohovan.com.wxapi.UserApi
         /// <param name="redirect_uri">回调页面</param>
         /// <param name="scope">应用授权作用域snsapi_base（不弹出授权页面，直接跳转，只能获取用户openid），snsapi_userinfo （弹出授权页面，可通过openid拿到昵称、性别、所在地。并且，即使在未关注的情况下，只要用户授权，也能获取其信息）</param>
         /// <returns>授权地址</returns>
-        public string  GetCodeUrl(string Appid, string redirect_uri, string scope)
+        public string GetCodeUrl(string Appid, string redirect_uri, string scope)
         {
             return string.Format("https://open.weixin.qq.com/connect/oauth2/authorize?appid={0}&redirect_uri={1}&response_type=code&scope={2}&state=STATE#wechat_redirect", Appid, redirect_uri, scope);
         }
