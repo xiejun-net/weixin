@@ -5,7 +5,6 @@ E:\MySVN\HuWaiTong\trunk\HuWaiTong\sohovan.com.wxapi\obj\Debug\sohovan.com.wxapi
 E:\MySVN\HuWaiTong\trunk\HuWaiTong\sohovan.com.wxapi\obj\Debug\sohovan.com.wxapi.pdb
 E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxapi\bin\Debug\sohovan.com.wxapi.dll
 E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxapi\bin\Debug\sohovan.com.wxapi.pdb
-E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxapi\obj\Debug\sohovan.com.wxapi.csprojResolveAssemblyReference.cache
 E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxapi\obj\Debug\sohovan.com.wxapi.dll
 E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxapi\obj\Debug\sohovan.com.wxapi.pdb
 E:\svn\trunk\wechat\sohovan.com.wxapi\bin\Debug\sohovan.com.wxapi.dll
