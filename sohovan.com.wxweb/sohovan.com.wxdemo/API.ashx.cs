@@ -64,7 +64,7 @@ namespace sohovan.com.wxdemo
         /// * 开发者获得加密后的字符串可与signature对比，标识该请求来源于微信。
         private bool CheckSignature()
         {
-            string access_token = "mytoken";
+            string access_token = "sohovan";
 
             string signature = HttpContext.Current.Request.QueryString["signature"].ToString();
             string timestamp = HttpContext.Current.Request.QueryString["timestamp"].ToString();

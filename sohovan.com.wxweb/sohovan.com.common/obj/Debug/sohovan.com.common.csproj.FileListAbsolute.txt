@@ -1,0 +1,4 @@
+E:\github\sohovan\sohovan.com.wxweb\sohovan.com.common\bin\Debug\sohovan.com.common.dll
+E:\github\sohovan\sohovan.com.wxweb\sohovan.com.common\bin\Debug\sohovan.com.common.pdb
+E:\github\sohovan\sohovan.com.wxweb\sohovan.com.common\obj\Debug\sohovan.com.common.dll
+E:\github\sohovan\sohovan.com.wxweb\sohovan.com.common\obj\Debug\sohovan.com.common.pdb

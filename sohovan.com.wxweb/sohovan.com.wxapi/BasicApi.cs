@@ -6,6 +6,7 @@ using System.Text;
 using System.IO;
 using System.Net;
 using System.Web.Script.Serialization;
+using sohovan.com.common;
 
 namespace sohovan.com.wxapi
 {

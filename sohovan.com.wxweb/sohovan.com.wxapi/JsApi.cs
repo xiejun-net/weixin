@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Web.Security;
 using System.Web.Script.Serialization;
+using sohovan.com.common;
 
 namespace sohovan.com.wxapi
 {

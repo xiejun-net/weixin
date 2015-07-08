@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sohovan.com.wxapi", "sohova
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sohovan.com.wxdemo", "sohovan.com.wxdemo\sohovan.com.wxdemo.csproj", "{1696EB1D-5EA2-4F9A-B663-D3BAF6467193}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sohovan.com.common", "sohovan.com.common\sohovan.com.common.csproj", "{C9E915A2-C87D-4F71-BB9D-A6EF3A646D7B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{1696EB1D-5EA2-4F9A-B663-D3BAF6467193}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1696EB1D-5EA2-4F9A-B663-D3BAF6467193}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1696EB1D-5EA2-4F9A-B663-D3BAF6467193}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9E915A2-C87D-4F71-BB9D-A6EF3A646D7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9E915A2-C87D-4F71-BB9D-A6EF3A646D7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9E915A2-C87D-4F71-BB9D-A6EF3A646D7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9E915A2-C87D-4F71-BB9D-A6EF3A646D7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

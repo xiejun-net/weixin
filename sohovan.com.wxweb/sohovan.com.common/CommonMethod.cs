@@ -7,7 +7,7 @@ using System.IO;
 using System.Web;
 using System.Web.Script.Serialization;
 
-namespace sohovan.com.wxapi
+namespace sohovan.com.common
 {
     /// <summary>
     /// 通用方法类

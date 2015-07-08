@@ -44,10 +44,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasicApi.cs" />
-    <Compile Include="CommonMethod.cs" />
     <Compile Include="JsApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserApi\Oauth2.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\sohovan.com.common\sohovan.com.common.csproj">
+      <Project>{c9e915a2-c87d-4f71-bb9d-a6ef3a646d7b}</Project>
+      <Name>sohovan.com.common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
