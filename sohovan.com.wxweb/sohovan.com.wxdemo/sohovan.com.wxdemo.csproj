@@ -270,6 +270,16 @@
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\sohovan.com.common\sohovan.com.common.csproj">
+      <Project>{c9e915a2-c87d-4f71-bb9d-a6ef3a646d7b}</Project>
+      <Name>sohovan.com.common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\sohovan.com.wxapi\sohovan.com.wxapi.csproj">
+      <Project>{ebba57d3-aa72-43f0-89cf-9fc362a2d73b}</Project>
+      <Name>sohovan.com.wxapi</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

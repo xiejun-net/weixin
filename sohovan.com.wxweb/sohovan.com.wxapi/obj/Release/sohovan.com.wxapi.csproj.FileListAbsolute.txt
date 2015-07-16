@@ -1,0 +1,7 @@
+E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxapi\bin\Release\sohovan.com.wxapi.dll
+E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxapi\bin\Release\sohovan.com.wxapi.pdb
+E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxapi\bin\Release\sohovan.com.common.dll
+E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxapi\bin\Release\sohovan.com.common.pdb
+E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxapi\obj\Release\sohovan.com.wxapi.csprojResolveAssemblyReference.cache
+E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxapi\obj\Release\sohovan.com.wxapi.dll
+E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxapi\obj\Release\sohovan.com.wxapi.pdb

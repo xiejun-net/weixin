@@ -63,3 +63,8 @@ E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxdemo\bin\zh-Hans\System.Net.Ht
 E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxdemo\bin\zh-Hans\System.Net.Http.WebRequest.resources.dll
 E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxdemo\bin\zh-Hans\System.Web.Http.resources.dll
 E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxdemo\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxdemo\obj\Debug\sohovan.com.wxdemo.csprojResolveAssemblyReference.cache
+E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxdemo\bin\sohovan.com.common.dll
+E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxdemo\bin\sohovan.com.wxapi.dll
+E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxdemo\bin\sohovan.com.common.pdb
+E:\github\sohovan\sohovan.com.wxweb\sohovan.com.wxdemo\bin\sohovan.com.wxapi.pdb
