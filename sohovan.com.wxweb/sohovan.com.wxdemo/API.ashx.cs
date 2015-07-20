@@ -91,64 +91,68 @@ namespace sohovan.com.wxdemo
         #endregion
 
         #region 接收消息
-/// <summary>
-/// 接收微信发送的XML消息并且解析
-/// </summary>
-private void ReceiveXml()
-{
-    Stream requestStream = System.Web.HttpContext.Current.Request.InputStream;
-    byte[] requestByte = new byte[requestStream.Length];
-    requestStream.Read(requestByte, 0, (int)requestStream.Length);
-    string requestStr = Encoding.UTF8.GetString(requestByte);
-
-    if (!string.IsNullOrEmpty(requestStr))
-    {
-        //封装请求类
-        XmlDocument requestDocXml = new XmlDocument();
-        requestDocXml.LoadXml(requestStr);
-        XmlElement rootElement = requestDocXml.DocumentElement;
-
-        WxXmlModel WxXmlModel = new WxXmlModel();
-        WxXmlModel.ToUserName = rootElement.SelectSingleNode("ToUserName").InnerText;
-        WxXmlModel.FromUserName = rootElement.SelectSingleNode("FromUserName").InnerText;
-        WxXmlModel.CreateTime = rootElement.SelectSingleNode("CreateTime").InnerText;
-        WxXmlModel.MsgType = rootElement.SelectSingleNode("MsgType").InnerText;
-
-        switch (WxXmlModel.MsgType)
+        /// <summary>
+        /// 接收微信发送的XML消息并且解析
+        /// </summary>
+        private void ReceiveXml()
         {
-            case "text":
-                WxXmlModel.Content = rootElement.SelectSingleNode("Content").InnerText;
-                break;
-            case "image":
-                WxXmlModel.PicUrl = rootElement.SelectSingleNode("PicUrl").InnerText;
-                break;
-            case "event":
-                WxXmlModel.Event = rootElement.SelectSingleNode("Event").InnerText;
-                if (WxXmlModel.Event == "subscribe")//关注类型
+            Stream requestStream = System.Web.HttpContext.Current.Request.InputStream;
+            byte[] requestByte = new byte[requestStream.Length];
+            requestStream.Read(requestByte, 0, (int)requestStream.Length);
+            string requestStr = Encoding.UTF8.GetString(requestByte);
+
+            if (!string.IsNullOrEmpty(requestStr))
+            {
+                //封装请求类
+                XmlDocument requestDocXml = new XmlDocument();
+                requestDocXml.LoadXml(requestStr);
+                XmlElement rootElement = requestDocXml.DocumentElement;
+
+                WxXmlModel WxXmlModel = new WxXmlModel();
+                WxXmlModel.ToUserName = rootElement.SelectSingleNode("ToUserName").InnerText;
+                WxXmlModel.FromUserName = rootElement.SelectSingleNode("FromUserName").InnerText;
+                WxXmlModel.CreateTime = rootElement.SelectSingleNode("CreateTime").InnerText;
+                WxXmlModel.MsgType = rootElement.SelectSingleNode("MsgType").InnerText;
+
+                switch (WxXmlModel.MsgType)
                 {
-                    WxXmlModel.EventKey = rootElement.SelectSingleNode("EventKey").InnerText;
+                    case "text"://文本
+                        WxXmlModel.Content = rootElement.SelectSingleNode("Content").InnerText;
+                        break;
+                    case "image"://图片
+                        WxXmlModel.PicUrl = rootElement.SelectSingleNode("PicUrl").InnerText;
+                        break;
+                    case "event"://事件
+                        WxXmlModel.Event = rootElement.SelectSingleNode("Event").InnerText;
+                        if (WxXmlModel.Event == "subscribe")//关注类型
+                        {
+                            WxXmlModel.EventKey = rootElement.SelectSingleNode("EventKey").InnerText;
+                        }
+                        break;
+                    default:
+                        break;
                 }
-                break;
-            default:
-                break;
+                
+                ResponseXML(WxXmlModel);
+            }
         }
-        sohovan.com.common.CommonMethod.WriteTxt(WxXmlModel.Content);//接收的文本消息
-        //回复消息<xml>
-        //<ToUserName><![CDATA[toUser]]></ToUserName>
-        //<FromUserName><![CDATA[fromUser]]></FromUserName>
-        //<CreateTime>12345678</CreateTime>
-        //<MsgType><![CDATA[text]]></MsgType>
-        //<Content><![CDATA[你好]]></Content>
-        //<FuncFlag>0</FuncFlag>
-        //</xml>
-        string XML = "<xml><ToUserName><![CDATA[" + WxXmlModel.FromUserName + "]]></ToUserName><FromUserName><![CDATA[" + WxXmlModel.ToUserName + "]]></FromUserName>";
-        XML +="<CreateTime>" + sohovan.com.common.CommonMethod.ConvertDateTimeInt(DateTime.Now) + "</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[接收消息成功,消息为" + WxXmlModel.Content + "]]></Content><FuncFlag>0</FuncFlag></xml>";
-        //ResponseXML(WxXmlModel);
-        sohovan.com.common.CommonMethod.WriteTxt(XML);
-        HttpContext.Current.Response.Write(XML);
-        HttpContext.Current.Response.End();
-    }
-}
+        #endregion
+
+        #region 回复消息
+        private void ResponseXML(WxXmlModel WxXmlModel)
+        {
+            string XML = "";
+            switch (WxXmlModel.MsgType)
+            { 
+                case "text"://文本回复
+                    XML = sohovan.com.wxapi.ResponseMessage.GetText(WxXmlModel.FromUserName, WxXmlModel.ToUserName, WxXmlModel.Content);
+                    break;
+                default://默认回复
+                    break;
+            }
+            HttpContext.Current.Response.Write(XML);
+            HttpContext.Current.Response.End();
+        }
         #endregion
 
         public bool IsReusable
