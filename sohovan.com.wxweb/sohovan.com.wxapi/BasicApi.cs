@@ -15,8 +15,6 @@ namespace sohovan.com.wxapi
     /// </summary>
     public class BasicApi
     {
-        
-
         public static string SessionAccessToken = "";//access_token缓存 其他接口的通行证
 
         public BasicApi() { }

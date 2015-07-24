@@ -8,6 +8,13 @@ namespace sohovan.com.wxapi
     public class ResponseMessage
     {
         #region 接收的类型
+        /// <summary>
+        /// 接收文本
+        /// </summary>
+        /// <param name="FromUserName"></param>
+        /// <param name="ToUserName"></param>
+        /// <param name="Content"></param>
+        /// <returns></returns>
         public static string GetText(string FromUserName, string ToUserName, string Content)
         {
             sohovan.com.common.CommonMethod.WriteTxt(Content);//接收的文本消息
@@ -24,6 +31,30 @@ namespace sohovan.com.wxapi
                     break;
             }
             return XML;
+        }
+
+        /// <summary>
+        /// 未关注扫描带参数二维码
+        /// </summary>
+        /// <param name="FromUserName"></param>
+        /// <param name="ToUserName"></param>
+        /// <param name="EventKey"></param>
+        /// <returns></returns>
+        public static string SubScanQrcode(string FromUserName, string ToUserName, string EventKey)
+        {
+            return "";
+        }
+
+        /// <summary>
+        /// 已关注扫描带参数二维码
+        /// </summary>
+        /// <param name="FromUserName"></param>
+        /// <param name="ToUserName"></param>
+        /// <param name="EventKey"></param>
+        /// <returns></returns>
+        public static string ScanQrcode(string FromUserName, string ToUserName, string EventKey)
+        {
+            return "";
         }
         #endregion
 

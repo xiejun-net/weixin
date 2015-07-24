@@ -107,7 +107,6 @@ namespace sohovan.com.wxdemo
                 XmlDocument requestDocXml = new XmlDocument();
                 requestDocXml.LoadXml(requestStr);
                 XmlElement rootElement = requestDocXml.DocumentElement;
-
                 WxXmlModel WxXmlModel = new WxXmlModel();
                 WxXmlModel.ToUserName = rootElement.SelectSingleNode("ToUserName").InnerText;
                 WxXmlModel.FromUserName = rootElement.SelectSingleNode("FromUserName").InnerText;
@@ -124,7 +123,7 @@ namespace sohovan.com.wxdemo
                         break;
                     case "event"://事件
                         WxXmlModel.Event = rootElement.SelectSingleNode("Event").InnerText;
-                        if (WxXmlModel.Event == "subscribe")//关注类型
+                        if (WxXmlModel.Event != "TEMPLATESENDJOBFINISH")//关注类型
                         {
                             WxXmlModel.EventKey = rootElement.SelectSingleNode("EventKey").InnerText;
                         }
@@ -132,8 +131,8 @@ namespace sohovan.com.wxdemo
                     default:
                         break;
                 }
-                
-                ResponseXML(WxXmlModel);
+           
+                ResponseXML(WxXmlModel);//回复消息
             }
         }
         #endregion
@@ -141,11 +140,30 @@ namespace sohovan.com.wxdemo
         #region 回复消息
         private void ResponseXML(WxXmlModel WxXmlModel)
         {
+            QrCodeApi QrCodeApi = new wxapi.QrCodeApi();
             string XML = "";
             switch (WxXmlModel.MsgType)
             { 
                 case "text"://文本回复
                     XML = sohovan.com.wxapi.ResponseMessage.GetText(WxXmlModel.FromUserName, WxXmlModel.ToUserName, WxXmlModel.Content);
+                    break;
+                case "event":
+                    switch (WxXmlModel.Event)
+                    {
+                        case "subscribe":
+                            if (string.IsNullOrEmpty(WxXmlModel.EventKey))
+                            {
+                                XML = sohovan.com.wxapi.ResponseMessage.GetText(WxXmlModel.FromUserName, WxXmlModel.ToUserName,"关注成功");
+                            }
+                            else
+                            {
+                                XML = sohovan.com.wxapi.ResponseMessage.SubScanQrcode(WxXmlModel.FromUserName, WxXmlModel.ToUserName, WxXmlModel.EventKey);//扫描带参数二维码先关注后推送事件
+                            }
+                            break;
+                        case "SCAN":
+                            XML = sohovan.com.wxapi.ResponseMessage.ScanQrcode(WxXmlModel.FromUserName, WxXmlModel.ToUserName, WxXmlModel.EventKey);//扫描带参数二维码已关注 直接推送事件
+                            break;
+                    }
                     break;
                 default://默认回复
                     break;

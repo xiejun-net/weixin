@@ -29,13 +29,13 @@
       <publishTime>06/13/2015 14:42:35</publishTime>
     </File>
     <File Include="bin/sohovan.com.common.dll">
-      <publishTime>07/20/2015 12:24:37</publishTime>
+      <publishTime>07/23/2015 11:44:08</publishTime>
     </File>
     <File Include="bin/sohovan.com.wxapi.dll">
-      <publishTime>07/20/2015 12:32:47</publishTime>
+      <publishTime>07/23/2015 11:44:08</publishTime>
     </File>
     <File Include="bin/sohovan.com.wxdemo.dll">
-      <publishTime>07/20/2015 12:32:47</publishTime>
+      <publishTime>07/23/2015 11:44:09</publishTime>
     </File>
     <File Include="bin/System.ComponentModel.DataAnnotations.dll">
       <publishTime>03/18/2010 19:31:26</publishTime>
@@ -398,7 +398,7 @@
       <publishTime>07/07/2015 19:50:25</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>07/20/2015 12:32:47</publishTime>
+      <publishTime>07/23/2015 11:44:09</publishTime>
     </File>
   </ItemGroup>
 </Project>
